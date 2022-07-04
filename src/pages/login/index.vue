@@ -4,10 +4,10 @@ import LoginForm from './components/LoginForm.vue'
 </script>
 
 <template>
-  <div class="container flex h-full">
+  <div class="flex h-full">
     <div class="logo fixed top-8 left-8 z-1 inline-flex items-center">
       <img src="//p3-armor.byteimg.com/tos-cn-i-49unhts6dw/dfdba5317c0c20ce20e64fac803d52bc.svg~tplv-49unhts6dw-image.image" alt="logo">
-      <div class="logo-text mr-1 ml-1 text-size-20px">
+      <div class="logo-text mr-1 ml-1 text-size-20px text-white">
         Arco Design Uno
       </div>
     </div>

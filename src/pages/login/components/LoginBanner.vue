@@ -20,15 +20,18 @@ const carouselItem = [
 </script>
 
 <template>
-  <div class="banner flex items-center justify-center w-137 @lg:max-w-1/4">
+  <div
+    class="banner flex items-center justify-center w-137 lt-lg:max-w-1/4" style="
+      background: linear-gradient(163.85deg, #1d2129 0%, #00308f 100%);"
+  >
     <div class="banner-inner flex-1 h-full">
       <ACarousel class="carousel h-full" animation-name="fade">
         <ACarouselItem v-for="item in carouselItem" :key="item.slogan">
           <div class="carousel-item flex flex-col items-center justify-center h-full">
-            <div class="carousel-title font-medium text-size-[20px] leading-[28px]">
+            <div class="carousel-title font-medium text-size-[20px] leading-[28px] text-white">
               {{ item.slogan }}
             </div>
-            <div class="carousel-sub-title mt-2 text-size-[14px] leading-[22px]">
+            <div class="carousel-sub-title mt-2 text-size-[14px] leading-[22px] text-white">
               {{ item.subSlogan }}
             </div>
             <img class="carousel-image w-80 mt-8" :src="item.image" :alt="item.slogan">

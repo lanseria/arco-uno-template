@@ -17,7 +17,6 @@ declare module '@vue/runtime-core' {
     AInput: typeof import('@arco-design/web-vue')['Input']
     AInputPassword: typeof import('@arco-design/web-vue')['InputPassword']
     ALink: typeof import('@arco-design/web-vue')['Link']
-    AResult: typeof import('@arco-design/web-vue')['Result']
     ASpace: typeof import('@arco-design/web-vue')['Space']
     Counter: typeof import('./src/components/Counter.vue')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']
