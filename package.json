@@ -18,9 +18,9 @@
     "build": "vite build",
     "dev": "vite --port 3333 --open",
     "lint": "eslint .",
-    "typecheck": "vue-tsc --noEmit",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
     "@arco-design/web-vue": "^2.32.1",
@@ -43,6 +43,8 @@
     "vue-tsc": "^0.38.2"
   },
   "eslintConfig": {
-    "extends": "@antfu"
+    "extends": [
+      "@antfu"
+    ]
   }
 }
