@@ -16,7 +16,7 @@
   "keywords": [],
   "scripts": {
     "build": "vite build",
-    "dev": "vite --port 3333 --open",
+    "dev": "vite --port 3333",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest",
@@ -25,13 +25,21 @@
   "dependencies": {
     "@arco-design/web-vue": "^2.32.1",
     "@vueuse/core": "^8.7.5",
+    "axios": "^0.27.2",
+    "echarts": "^5.3.3",
+    "mitt": "^3.0.0",
+    "nprogress": "^0.2.0",
+    "pinia": "^2.0.14",
+    "query-string": "^7.1.1",
     "vue": "^3.2.37",
+    "vue-echarts": "^6.1.0",
     "vue-router": "^4.0.16"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.25.2",
     "@iconify-json/carbon": "^1.1.6",
     "@types/node": "^18.0.1",
+    "@types/nprogress": "^0.2.0",
     "@unocss/reset": "^0.43.0",
     "@vitejs/plugin-vue": "^2.3.3",
     "eslint": "^8.19.0",

@@ -7,8 +7,23 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    AButton: typeof import('@arco-design/web-vue')['Button']
+    ACarousel: typeof import('@arco-design/web-vue')['Carousel']
+    ACarouselItem: typeof import('@arco-design/web-vue')['CarouselItem']
+    ACheckbox: typeof import('@arco-design/web-vue')['Checkbox']
+    AConfigProvider: typeof import('@arco-design/web-vue')['ConfigProvider']
+    AForm: typeof import('@arco-design/web-vue')['Form']
+    AFormItem: typeof import('@arco-design/web-vue')['FormItem']
+    AInput: typeof import('@arco-design/web-vue')['Input']
+    AInputPassword: typeof import('@arco-design/web-vue')['InputPassword']
+    ALink: typeof import('@arco-design/web-vue')['Link']
+    AResult: typeof import('@arco-design/web-vue')['Result']
+    ASpace: typeof import('@arco-design/web-vue')['Space']
     Counter: typeof import('./src/components/Counter.vue')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']
+    IconLock: typeof import('@arco-design/web-vue/es/icon')['IconLock']
+    IconPlus: typeof import('@arco-design/web-vue/es/icon')['IconPlus']
+    IconUser: typeof import('@arco-design/web-vue/es/icon')['IconUser']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

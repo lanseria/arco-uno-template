@@ -5,6 +5,7 @@ import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
+import { ArcoResolver } from 'unplugin-vue-components/resolvers'
 import Unocss from 'unocss/vite'
 
 export default defineConfig({
@@ -20,6 +21,7 @@ export default defineConfig({
 
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
+      resolvers: [ArcoResolver()],
       imports: [
         'vue',
         'vue/macros',
@@ -36,6 +38,12 @@ export default defineConfig({
     // https://github.com/antfu/vite-plugin-components
     Components({
       dts: true,
+      resolvers: [
+        ArcoResolver({
+          resolveIcons: true,
+          sideEffect: false,
+        }),
+      ],
     }),
 
     // https://github.com/antfu/unocss

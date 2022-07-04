@@ -4,7 +4,7 @@ const name = $ref('')
 const router = useRouter()
 const go = () => {
   if (name)
-    router.push(`/hi/${encodeURIComponent(name)}`)
+    router.push('/login')
 }
 </script>
 
@@ -21,19 +21,25 @@ const go = () => {
     </p>
 
     <div py-4 />
-    <a-input
+    <AInput
       v-model="name"
-      class="px-4 py-2 w-[250px]" placeholder="Please enter something" allow-clear
+      class="w-[250px] h-[50px]"
+      placeholder="请输入一些东西" allow-clear
       @keydown.enter="go"
     />
     <div>
-      <a-button
+      <AButton
         class="m-3" type="primary"
         :disabled="!name"
         @click="go"
       >
-        Go
-      </a-button>
+        <template #icon>
+          <icon-plus />
+        </template>
+        登陆
+      </AButton>
     </div>
   </div>
+
+  <Footer />
 </template>
