@@ -99,8 +99,7 @@ const toggleDrawerMenu = inject('toggleDrawerMenu')
             @click="handleToggleTheme"
           >
             <template #icon>
-              <icon-moon-fill v-if="theme === 'dark'" />
-              <icon-sun-fill v-else />
+              <div class="dark:i-carbon-moon i-carbon-sun" />
             </template>
           </a-button>
         </a-tooltip>
