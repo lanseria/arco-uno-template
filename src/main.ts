@@ -11,7 +11,6 @@ import '~/api/interceptor'
 
 import '@arco-design/web-vue/dist/arco.css'
 import '@unocss/reset/tailwind.css'
-import '~/styles/main.css'
 import '~/assets/style/global.less'
 import 'uno.css'
 
