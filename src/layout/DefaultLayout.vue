@@ -83,7 +83,9 @@ provide('toggleDrawerMenu', () => {
           <a-layout-content>
             <PageLayout />
           </a-layout-content>
-          <Footer v-if="footer" />
+          <div class="layout-footer text-center">
+            <Footer v-if="footer" />
+          </div>
         </a-layout>
       </a-layout>
     </a-layout>
@@ -159,6 +161,10 @@ provide('toggleDrawerMenu', () => {
   .layout-content {
     min-height: 100vh;
     overflow-y: hidden;
+    background-color: var(--color-fill-2);
+    transition: padding 0.2s cubic-bezier(0.34, 0.69, 0.1, 1);
+  }
+  .layout-footer {
     background-color: var(--color-fill-2);
     transition: padding 0.2s cubic-bezier(0.34, 0.69, 0.1, 1);
   }
