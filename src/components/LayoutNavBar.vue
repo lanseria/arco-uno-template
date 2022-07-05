@@ -79,7 +79,7 @@ const toggleDrawerMenu = inject('toggleDrawerMenu')
         <a-tooltip content="搜索">
           <a-button class="nav-btn" type="outline" shape="circle">
             <template #icon>
-              <icon-search />
+              <div class="i-carbon:search" />
             </template>
           </a-button>
         </a-tooltip>
@@ -114,7 +114,9 @@ const toggleDrawerMenu = inject('toggleDrawerMenu')
                 shape="circle"
                 @click="setPopoverVisible"
               >
-                <icon-notification />
+                <template #icon>
+                  <div class="i-carbon:notification" />
+                </template>
               </a-button>
             </a-badge>
           </div>
@@ -161,7 +163,7 @@ const toggleDrawerMenu = inject('toggleDrawerMenu')
             @click="setVisible"
           >
             <template #icon>
-              <icon-settings />
+              <div class="i-carbon:settings" />
             </template>
           </a-button>
         </a-tooltip>
