@@ -18,7 +18,7 @@ export default {
 </script>
 
 <template>
-  <div class="work-container">
+  <div class="common-container">
     <div class="left-side">
       <div class="panel">
         <Banner />
@@ -61,7 +61,7 @@ export default {
 </template>
 
 <style lang="less" scoped>
-  .work-container {
+  .common-container {
     display: flex;
     padding: 16px 20px;
     padding-bottom: 0;

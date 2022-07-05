@@ -7,6 +7,9 @@ import './message-box'
 import '~/views/dashboard/workplace/mock'
 
 import '~/views/dashboard/monitor/mock'
+
+import '~/views/account/category/mock'
+
 Mock.setup({
   timeout: '600-1000',
 })

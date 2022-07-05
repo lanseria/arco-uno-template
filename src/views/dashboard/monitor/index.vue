@@ -14,7 +14,7 @@ export default {
 </script>
 
 <template>
-  <div class="container">
+  <div class="px-5 pb-5">
     <Breadcrumb :items="['仪表盘', '实时监控']" />
     <div class="layout">
       <div class="layout-left-side">
@@ -37,11 +37,7 @@ export default {
   </div>
 </template>
 
-<style scoped lang="less">
-  .container {
-    padding: 0 20px 20px 20px;
-  }
-
+<style lang="less" scoped>
   .layout {
     display: flex;
 
@@ -58,9 +54,7 @@ export default {
       flex-basis: 280px;
     }
   }
-</style>
 
-<style lang="less" scoped>
   // responsive
   @media (max-width: @screen-lg) {
     .layout {

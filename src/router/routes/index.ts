@@ -1,6 +1,6 @@
 import type { RouteRecordNormalized } from 'vue-router'
 
-const modules = import.meta.globEager('./modules/dashboard.ts')
+const modules = import.meta.globEager('./modules/*.ts')
 // const externalModules = import.meta.globEager('./externalModules/*.ts')
 
 function formatModules(_modules: any, result: RouteRecordNormalized[]) {
