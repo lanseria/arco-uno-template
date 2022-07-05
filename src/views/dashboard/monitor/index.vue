@@ -15,7 +15,7 @@ export default {
 
 <template>
   <div class="container">
-    <Breadcrumb :items="['menu.dashboard', 'menu.dashboard.monitor']" />
+    <Breadcrumb :items="['仪表盘', '实时监控']" />
     <div class="layout">
       <div class="layout-left-side">
         <ChatPanel />

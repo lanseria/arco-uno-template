@@ -6,7 +6,7 @@ import { queryPopularList } from '~/api/dashboard'
 
 const type = ref('text')
 const { loading, setLoading } = useLoading()
-const renderList = ref<TableData[]>()
+const renderList = ref<TableData[]>([])
 const fetchData = async (contentType: string) => {
   try {
     setLoading(true)

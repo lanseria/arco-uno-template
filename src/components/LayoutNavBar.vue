@@ -65,7 +65,7 @@ const toggleDrawerMenu = inject('toggleDrawerMenu')
           :style="{ margin: 0, fontSize: '18px' }"
           :heading="5"
         >
-          Arco Pro
+          Arco Uno Pro
         </a-typography-title>
         <icon-menu-fold
           v-if="appStore.device === 'mobile'"

@@ -52,5 +52,16 @@ export default defineConfig({
     // see unocss.config.ts for config
     Unocss(),
   ],
-
+  css: {
+    preprocessorOptions: {
+      less: {
+        modifyVars: {
+          hack: `true; @import (reference) "${path.resolve(
+            'src/assets/style/breakpoint.less',
+          )}";`,
+        },
+        javascriptEnabled: true,
+      },
+    },
+  },
 })

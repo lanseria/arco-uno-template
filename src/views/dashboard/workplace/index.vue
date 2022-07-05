@@ -18,7 +18,7 @@ export default {
 </script>
 
 <template>
-  <div class="container">
+  <div class="work-container">
     <div class="left-side">
       <div class="panel">
         <Banner />
@@ -61,7 +61,7 @@ export default {
 </template>
 
 <style lang="less" scoped>
-  .container {
+  .work-container {
     display: flex;
     padding: 16px 20px;
     padding-bottom: 0;
@@ -140,7 +140,7 @@ export default {
 <style lang="less" scoped>
   // responsive
   .mobile {
-    .container {
+    .work-container {
       display: block;
     }
 
