@@ -46,6 +46,7 @@ const handleSubmit = async ({
       loginConfig.value.password = rememberPassword ? password : ''
     }
     catch (err) {
+      console.log(err)
       errorMessage.value = (err as Error).message
     }
     finally {
@@ -66,7 +67,7 @@ const setRememberPassword = (value: boolean) => {
     <div class="login-form-sub-title text-size-16px leading-24px">
       登录 Arco Design Pro
     </div>
-    <div class="login-form-error-msg h-8 leading-32px">
+    <div class="login-form-error-msg h-8 leading-32px text-red-500">
       {{ errorMessage }}
     </div>
     <a-form
@@ -78,7 +79,7 @@ const setRememberPassword = (value: boolean) => {
     >
       <a-form-item
         field="username"
-        :rules="[{ required: true, message: '登录出错，轻刷新重试' }]"
+        :rules="[{ required: true, message: '用户名不能为空' }]"
         :validate-trigger="['change', 'blur']"
         hide-label
       >
@@ -93,7 +94,7 @@ const setRememberPassword = (value: boolean) => {
       </a-form-item>
       <a-form-item
         field="password"
-        :rules="[{ required: true, message: '登录出错，轻刷新重试' }]"
+        :rules="[{ required: true, message: '密码不能为空' }]"
         :validate-trigger="['change', 'blur']"
         hide-label
       >

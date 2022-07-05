@@ -32,10 +32,16 @@ const useAppStore = defineStore('app', {
     toggleTheme(dark: boolean) {
       if (dark) {
         this.theme = 'dark'
+        // 设置为暗黑主题
+        document.documentElement.classList.remove('light')
+        document.documentElement.classList.add('dark')
         document.body.setAttribute('arco-theme', 'dark')
       }
       else {
         this.theme = 'light'
+        // 恢复亮色主题
+        document.documentElement.classList.remove('dark')
+        document.documentElement.classList.add('light')
         document.body.removeAttribute('arco-theme')
       }
     },
