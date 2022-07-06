@@ -12,23 +12,19 @@ export default {
 <template>
   <div class="px-5 pb-5">
     <Breadcrumb :items="['账号', '素材管理']" />
-    <ARow :gutter="20" align="stretch">
-      <ACol :span="24">
-        <ACard class="general-card" title="素材管理">
-          <ARow justify="space-between">
-            <ACol :span="24">
-              <ATabs :default-active-tab="1" type="rounded">
-                <ATabPane key="1" title="图片">
-                  <PicturePanel />
-                </ATabPane>
-                <ATabPane key="2" title="视频">
-                  <VideoPanel />
-                </ATabPane>
-              </ATabs>
-            </ACol>
-          </ARow>
-        </ACard>
-      </ACol>
-    </ARow>
+    <ACard class="general-card" title="素材管理">
+      <ARow justify="space-between">
+        <ACol :span="24">
+          <ATabs :default-active-tab="1" type="rounded">
+            <ATabPane key="1" title="图片">
+              <PicturePanel />
+            </ATabPane>
+            <ATabPane key="2" title="视频">
+              <VideoPanel />
+            </ATabPane>
+          </ATabs>
+        </ACol>
+      </ARow>
+    </ACard>
   </div>
 </template>

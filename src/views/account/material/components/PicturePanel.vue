@@ -36,6 +36,7 @@ const { loading, response: renderData } = useRequest<ServiceRecord[]>(
       :lg="6"
       :xl="6"
       :xxl="6"
+      class="mb-4"
     >
       <div class="card-wrap empty-wrap">
         <a-card :bordered="false" hoverable>
@@ -50,7 +51,7 @@ const { loading, response: renderData } = useRequest<ServiceRecord[]>(
     <a-col
       v-for="item in renderData"
       :key="item.id"
-      class="list-col"
+      class="mb-4"
       :xs="12"
       :sm="12"
       :md="12"
