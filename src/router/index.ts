@@ -13,7 +13,7 @@ const router = createRouter({
     {
       path: '/',
       name: '首页',
-      component: () => import('~/pages/index.vue'),
+      redirect: '/login',
     },
     {
       path: '/login',

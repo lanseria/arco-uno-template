@@ -13,7 +13,7 @@ export default {
         个人信息
       </template>
       <a-list-item>
-        <ASpace class="w-full" justify="between">
+        <ASpace class="w-full justify-between">
           <a-list-item-meta
             title="手机号"
             description="15544334433"
@@ -24,7 +24,7 @@ export default {
         </ASpace>
       </a-list-item>
       <a-list-item>
-        <ASpace class="w-full" justify="between">
+        <ASpace class="w-full justify-between">
           <a-list-item-meta
             title="密码"
             description="**********"
@@ -35,7 +35,7 @@ export default {
         </ASpace>
       </a-list-item>
       <a-list-item>
-        <ASpace class="w-full" justify="between">
+        <ASpace class="w-full justify-between">
           <a-list-item-meta
             title="平台版本"
             description="标准试用版"
