@@ -30,6 +30,7 @@ declare module '@vue/runtime-core' {
     AGrid: typeof import('@arco-design/web-vue')['Grid']
     AGridItem: typeof import('@arco-design/web-vue')['GridItem']
     AInput: typeof import('@arco-design/web-vue')['Input']
+    AInputPassword: typeof import('@arco-design/web-vue')['InputPassword']
     AInputSearch: typeof import('@arco-design/web-vue')['InputSearch']
     ALayout: typeof import('@arco-design/web-vue')['Layout']
     ALayoutContent: typeof import('@arco-design/web-vue')['LayoutContent']
@@ -82,6 +83,7 @@ declare module '@vue/runtime-core' {
     IconFilter: typeof import('@arco-design/web-vue/es/icon')['IconFilter']
     IconFullscreen: typeof import('@arco-design/web-vue/es/icon')['IconFullscreen']
     IconFullscreenExit: typeof import('@arco-design/web-vue/es/icon')['IconFullscreenExit']
+    IconLock: typeof import('@arco-design/web-vue/es/icon')['IconLock']
     IconMenuFold: typeof import('@arco-design/web-vue/es/icon')['IconMenuFold']
     IconMore: typeof import('@arco-design/web-vue/es/icon')['IconMore']
     IconPlus: typeof import('@arco-design/web-vue/es/icon')['IconPlus']
@@ -102,5 +104,4 @@ declare module '@vue/runtime-core' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
-
 }
