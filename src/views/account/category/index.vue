@@ -60,10 +60,6 @@ export default {
       <ATable row-key="id" :loading="loading" :data="renderData" :bordered="false" :pagination="false">
         <template #columns>
           <a-table-column
-            title="ID"
-            data-index="id"
-          />
-          <a-table-column
             title="分类名称"
             data-index="categoryName"
           />

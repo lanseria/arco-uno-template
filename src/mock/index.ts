@@ -10,6 +10,8 @@ import '~/views/dashboard/monitor/mock'
 
 import '~/views/account/category/mock'
 
+import '~/views/account/material/mock'
+
 Mock.setup({
   timeout: '600-1000',
 })

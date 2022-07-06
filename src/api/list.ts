@@ -36,6 +36,7 @@ export interface ServiceRecord {
   id: number
   title: string
   description: string
+  cover: string
   name?: string
   actionType?: string
   icon?: string
