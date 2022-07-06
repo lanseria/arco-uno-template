@@ -24,65 +24,62 @@ onMounted(() => {
 
 <script lang="ts">
 export default {
-  name: 'Category',
+  name: 'AccountCategory',
 }
 </script>
 
 <template>
-  <div class="px-5 pb-5">
-    <Breadcrumb :items="['账号', '分类管理']" />
-    <ACard class="general-card" title="分类管理">
-      <ARow class="mb-4">
-        <ACol :span="16">
-          <ASpace>
-            <AButton type="primary">
-              <template #icon>
-                <IconPlus />
-              </template>
-              新建一级分类
-            </AButton>
-            <AUpload action="/">
-              <template #upload-button>
-                <AButton>批量上传</AButton>
-              </template>
-            </AUpload>
-          </ASpace>
-        </ACol>
-        <ACol :span="8" class="text-right">
-          <AButton>
+  <LayoutContainer :items="['账号', '分类管理']" title="分类管理">
+    <ARow class="mb-4">
+      <ACol :span="16">
+        <ASpace>
+          <AButton type="primary">
             <template #icon>
-              <icon-download />
+              <IconPlus />
             </template>
-            下载导出
+            新建一级分类
           </AButton>
-        </ACol>
-      </ARow>
-      <ATable row-key="id" :loading="loading" :data="renderData" :bordered="false" :pagination="false">
-        <template #columns>
-          <a-table-column
-            title="分类名称"
-            data-index="categoryName"
-          />
-          <a-table-column
-            title="操作"
-            data-index="operations"
-            fixed="right"
-            :width="250"
-          >
-            <template #cell>
-              <a-button type="text" size="small">
-                新建分类
-              </a-button>
-              <a-button type="text" size="small">
-                编辑
-              </a-button>
-              <a-button type="text" size="small" status="danger">
-                删除
-              </a-button>
+          <AUpload action="/">
+            <template #upload-button>
+              <AButton>批量上传</AButton>
             </template>
-          </a-table-column>
-        </template>
-      </ATable>
-    </ACard>
-  </div>
+          </AUpload>
+        </ASpace>
+      </ACol>
+      <ACol :span="8" class="text-right">
+        <AButton>
+          <template #icon>
+            <icon-download />
+          </template>
+          下载导出
+        </AButton>
+      </ACol>
+    </ARow>
+    <ATable row-key="id" :loading="loading" :data="renderData" :bordered="false" :pagination="false">
+      <template #columns>
+        <a-table-column
+          title="分类名称"
+          data-index="categoryName"
+        />
+        <a-table-column
+          title="操作"
+          data-index="operations"
+          fixed="right"
+          :width="250"
+        >
+          <template #cell>
+            <a-button type="text" size="small">
+              新建分类
+            </a-button>
+            <a-button type="text" size="small">
+              编辑
+            </a-button>
+            <a-button type="text" size="small" status="danger">
+              删除
+            </a-button>
+          </template>
+        </a-table-column>
+      </template>
+    </ATable>
+  </LayoutContainer>
 </template>

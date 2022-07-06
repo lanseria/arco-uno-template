@@ -1,4 +1,5 @@
 import axios from 'axios'
+import qs from 'query-string'
 
 export interface CourseRecord {
   id: string
@@ -8,7 +9,21 @@ export interface CourseRecord {
   cover: string
   status: string
 }
+export interface CourseParams extends Partial<CourseRecord> {
+  current: number
+  pageSize: number
+}
 
-export const queryCoursePage = () => {
-  return axios.get<CourseRecord[]>('/api/course/page')
+export interface CoursePageRes {
+  list: CourseRecord[]
+  total: number
+}
+
+export const queryCoursePage = (params: CourseParams) => {
+  return axios.get<CoursePageRes>('/api/course/page', {
+    params,
+    paramsSerializer: (obj) => {
+      return qs.stringify(obj)
+    },
+  })
 }
