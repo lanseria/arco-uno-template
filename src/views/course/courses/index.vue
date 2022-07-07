@@ -26,6 +26,7 @@ const courseStatusOptions = computed<SelectOptionData[]>(() => [
     value: '3',
   },
 ])
+const router = useRouter()
 const { loading, setLoading } = useLoading(true)
 const renderData = ref<CourseRecord[]>([])
 
@@ -41,6 +42,11 @@ const rowSelection = reactive<TableRowSelection>({
   showCheckedAll: true,
   onlyCurrent: false,
 })
+const handleNew = () => {
+  router.push({
+    name: 'CoursesNew',
+  })
+}
 const onPageChange = (current: number) => {
   fetchData({ ...basePagination, current })
 }
@@ -67,7 +73,7 @@ onMounted(() => {
 
 <script lang="ts">
 export default {
-  name: 'Classes',
+  name: 'CoursesPage',
 }
 </script>
 
@@ -143,7 +149,7 @@ export default {
     <ARow class="mb-4">
       <ACol :span="16">
         <ASpace>
-          <AButton type="primary">
+          <AButton type="primary" @click="handleNew()">
             <template #icon>
               <IconPlus />
             </template>
@@ -181,9 +187,13 @@ export default {
         >
           <template #cell="{ record }">
             <a-list-item-meta
-              :title="record.name"
               description=""
             >
+              <template #title>
+                <a-link href="link">
+                  {{ record.name }}
+                </a-link>
+              </template>
               <template #avatar>
                 <a-image
                   width="80"
