@@ -33,7 +33,7 @@
     "pinia": "^2.0.14",
     "query-string": "^7.1.1",
     "vue": "^3.2.37",
-    "vue-echarts": "^6.2.1",
+    "vue-echarts": "^6.2.2",
     "vue-router": "^4.1.1"
   },
   "devDependencies": {
@@ -53,7 +53,7 @@
     "unplugin-auto-import": "^0.9.2",
     "unplugin-vue-components": "^0.21.1",
     "vite": "^2.9.13",
-    "vue-tsc": "^0.38.2"
+    "vue-tsc": "^0.38.3"
   },
   "eslintConfig": {
     "extends": [

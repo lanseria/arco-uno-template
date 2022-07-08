@@ -1,4 +1,3 @@
-import { RouterView } from 'vue-router'
 import type { AppRouteRecordRaw } from '../types'
 import { DEFAULT_LAYOUT } from '~/router/constants'
 
@@ -16,7 +15,6 @@ const COURSE: AppRouteRecordRaw = {
     {
       path: 'courses',
       name: 'Courses',
-      component: () => h(RouterView),
       redirect: '/course/courses/page',
       meta: {
         locale: '课程管理',

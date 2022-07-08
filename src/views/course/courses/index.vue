@@ -42,14 +42,11 @@ const rowSelection = reactive<TableRowSelection>({
   showCheckedAll: true,
   onlyCurrent: false,
 })
-const handleNew = () => {
-  router.push({
-    name: 'CoursesNew',
-  })
-}
+
 const onPageChange = (current: number) => {
   fetchData({ ...basePagination, current })
 }
+
 const fetchData = async (
   params: CourseParams = { current: 1, pageSize: 20 }) => {
   setLoading(true)
@@ -66,6 +63,7 @@ const fetchData = async (
     setLoading(false)
   }
 }
+
 onMounted(() => {
   fetchData()
 })
@@ -149,7 +147,11 @@ export default {
     <ARow class="mb-4">
       <ACol :span="16">
         <ASpace>
-          <AButton type="primary" @click="handleNew()">
+          <AButton
+            type="primary" @click="() => router.push({
+              path: 'new',
+            })"
+          >
             <template #icon>
               <IconPlus />
             </template>
@@ -190,7 +192,11 @@ export default {
               description=""
             >
               <template #title>
-                <a-link href="link">
+                <a-link
+                  @click="() => router.push({
+                    path: 'detail/1',
+                  })"
+                >
                   {{ record.name }}
                 </a-link>
               </template>
