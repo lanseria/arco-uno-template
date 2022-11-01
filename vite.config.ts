@@ -64,4 +64,17 @@ export default defineConfig({
       },
     },
   },
+
+  optimizeDeps: {
+    include: [
+      'echarts',
+      'crypto-js',
+      'dayjs',
+      'dayjs/plugin/quarterOfYear',
+      'dayjs/locale/zh-cn',
+      'nanoid',
+      '@arco-design/web-vue/es/locale/lang/zh-cn',
+      '@vueuse/core',
+    ],
+  },
 })
