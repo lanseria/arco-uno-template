@@ -1,5 +1,4 @@
 import axios from 'axios'
-import qs from 'query-string'
 import type { HttpResponse } from './interceptor'
 
 export interface CourseRecord {
@@ -31,9 +30,6 @@ export interface CourseChapterRecord {
 export const queryCoursePage = (params: CourseParams) => {
   return axios.get<CoursePageRes>('/api/course/page', {
     params,
-    paramsSerializer: (obj) => {
-      return qs.stringify(obj)
-    },
   })
 }
 

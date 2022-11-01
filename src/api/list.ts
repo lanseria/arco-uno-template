@@ -1,5 +1,4 @@
 import axios from 'axios'
-import qs from 'query-string'
 import type { DescData } from '@arco-design/web-vue/es/descriptions/interface'
 
 export interface PolicyRecord {
@@ -26,9 +25,6 @@ export interface PolicyListRes {
 export function queryPolicyList(params: PolicyParams) {
   return axios.get<PolicyListRes>('/api/list/policy', {
     params,
-    paramsSerializer: (obj) => {
-      return qs.stringify(obj)
-    },
   })
 }
 

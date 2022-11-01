@@ -1,5 +1,5 @@
 import axios from 'axios'
-import type { AxiosRequestConfig, AxiosResponse } from 'axios'
+import type { AxiosRequestConfig } from 'axios'
 import { Message, Modal } from '@arco-design/web-vue'
 import { useUserStore } from '~/store'
 import { getToken } from '~/utils/auth'
@@ -36,7 +36,7 @@ axios.interceptors.request.use(
 )
 // add response interceptors
 axios.interceptors.response.use(
-  (response: AxiosResponse<HttpResponse>) => {
+  (response) => {
     const res = response.data
     // if the custom code is not 20000, it is judged as an error.
     if (res.code !== 20000) {
